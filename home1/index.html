@@ -5,12 +5,8 @@
 <script type="text/javascript">
   window.history.pushState({page: 1}, "", "");
   
-  window.onpopstate = function(event) {
-      if(event){
-          window.location.href = 'https://voublaa.github.io/website/english/home1/';
-          // Code to handle back button or prevent from navigation
-      }
-  }
+  window.onpopstate = function()  window.location.href = 'https://voublaa.github.io/website/english/home1/'; history.pushState({}, '');
+     
   </script>
 </head>
 <body>
