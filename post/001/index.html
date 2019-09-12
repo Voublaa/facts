@@ -17,14 +17,16 @@ window.onpopstate = function(event) {
 <!--parent-->
 <div class="parent">
 
-<div class="top">
-<div class="back" onclick="parent.location='https://voublaa.github.io/facts/home1'">
-<img src="https://voublaa.github.io/res/common/backward.svg" width="100%">
-</div>
-    <div class="title">
-        <img src="https://voublaa.github.io/res/common/voublaa.svg" width="100%">
+<div class="fixed_head">
+    <div class="back" onclick="parent.location='https://voublaa.github.io/facts/home1'">
+        <img src="https://voublaa.github.io/res/common/backward.svg" width="100%">
     </div>
+<div class="title"><img src="https://voublaa.github.io/res/common/voublaa.svg" width="100%"></div>
+<img class="search" src="https://voublaa.github.io/res/common/search.svg" onclick="parent.location='https://voublaa.github.io/search ' 
+										   document.getElementsByClassName('loader')[0].style.display='block'; ">
 </div>
+<div class="hide_fixed_head"></div>
+
 
 <div class="content">
 <div class="ct_loading">LOADING...</div>
