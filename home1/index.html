@@ -3,10 +3,29 @@
 <meta name="viewport" content="initial-scale=2, maximum-scale=1.0, user-scalable=no" />
 <link href="https://voublaa.github.io/res/style/facts_menu/style.css" rel="stylesheet">
 <script type="text/javascript">
-  window.history.pushState({page: 1}, "", "");
-  
-  window.onpopstate = function()  window.location.href = 'https://voublaa.github.io/website/english/home1/'; history.pushState({}, '');
-     
+ jQuery(document).ready(function($) {
+
+      if (window.history && window.history.pushState) {
+
+        $(window).on('popstate', function() {
+          var hashLocation = location.hash;
+          var hashSplit = hashLocation.split("#!/");
+          var hashName = hashSplit[1];
+
+          if (hashName !== '') {
+            var hash = window.location.hash;
+            if (hash === '') {
+              alert('Back button was pressed.');
+                window.location='www.example.com';
+                return false;
+            }
+          }
+        });
+
+        window.history.pushState('forward', null, './#forward');
+      }
+
+    });
   </script>
 </head>
 <body>
