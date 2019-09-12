@@ -17,14 +17,15 @@ window.onpopstate = function(event) {
 <!--parent-->
 <div class="parent">
 
-<div class="top">
-<div class="back" onclick="parent.location='https://voublaa.github.io/facts/home1'">
-<img src="https://voublaa.github.io/res/common/backward.svg" width="100%">
-</div>
-    <div class="title">
-        <img src="https://voublaa.github.io/res/common/voublaa.svg" width="100%">
+<div class="fixed_head">
+    <div class="back" onclick="parent.location='https://voublaa.github.io/facts/home1'">
+        <img src="https://voublaa.github.io/res/common/backward.svg" width="100%">
     </div>
+<div class="title"><img src="https://voublaa.github.io/res/common/voublaa.svg" width="100%"></div>
+<img class="search" src="https://voublaa.github.io/res/common/search.svg" onclick="parent.location='https://voublaa.github.io/search ' 
+										   document.getElementsByClassName('loader')[0].style.display='block'; ">
 </div>
+<div class="hide_fixed_head"></div>
 
 <div class="content">
 <div class="ct_loading">LOADING...</div>
@@ -33,18 +34,18 @@ window.onpopstate = function(event) {
 </div>
 
 <div class="bottom">
- <input type="checkbox" id="box2">
- <label onclick="parent.location='https://voublaa.github.io/facts/post/007'" for="box2" class="previous">
+ <div class="previous" onclick="parent.location='https://voublaa.github.io/facts/post/007'; 
+document.getElementsByClassName('loader')[0].style.display='block';">
  <img src="https://voublaa.github.io/res/common/arrow.png" width="100%">
- </label>
+ </div>
  
  
  
- <input type="checkbox" id="box1">
- <label onclick="parent.location='https://voublaa.github.io/facts/post/009'"
-  for="box1" class="next">
+ 
+ <div class="next" onclick="parent.location='https://voublaa.github.io/facts/post/009'; 
+document.getElementsByClassName('loader')[0].style.display='block';">
  <img src="https://voublaa.github.io/res/common/arrow.png" width="100%">
- </label>
+ </div>
  <div class="loader"><div class="loader_ct">
  <img class="one" src="https://voublaa.github.io/res/loading/1.svg"/>
  <img class="two" src="https://voublaa.github.io/res/loading/2.svg"/>
@@ -68,5 +69,4 @@ window.onpopstate = function(event) {
 
 </body>
 </html>
-
 
